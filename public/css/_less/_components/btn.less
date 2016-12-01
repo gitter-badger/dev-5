@@ -1,0 +1,41 @@
+.btn {
+  position: relative;
+  display: block;
+  margin-right: @base-line-smaller/2;
+  margin-left: 3em;
+  margin-bottom: @base-line-smaller;
+  padding: .2em;
+  font-family: @fontOS;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: @base07;
+  background: @base01;
+  box-shadow: @base-line-smaller/2 @base-line-smaller/2 0 @base0D;
+  :hover {
+    color: @base07;
+    background: @base02;
+  }
+  ::before {
+    content: "btn";
+    position: absolute;
+    left: -3em;
+    display: block;
+    height: 2em;
+    padding-right: .5em;
+    font-family: @fontHack;
+    line-height: 2em;
+    text-transform: lowercase;
+    border-right: 1px solid @base06;
+  }
+}
+
+// MAIN
+
+.main-cont-menu-ptr::before {
+  content: "ptr";
+}
+
+.main-cont-menu-abt::before {
+  content: "abt";
+}

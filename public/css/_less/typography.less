@@ -1,0 +1,100 @@
+body {
+	font-family: @fontHack;
+	line-height: @base-line;
+	font-size: @font-size-regular;
+}
+
+// Links
+a {
+	color: @base0D;
+}
+a:hover {
+	color: @base0C;
+}
+
+// Headings
+h1.title, h1, h2, h3, h4, h5, h6 {
+	font-family: @fontHack;
+	font-weight: bold;
+	text-rendering: optimizeLegibility;
+	margin-bottom: @heading-margin-bottom;
+}
+h1.title {
+	font-size: @title-font-size;
+	line-height: @title-line-height;
+}
+h1,
+.h1 {
+	font-size: @h1-font-size;
+	line-height: @h1-line-height;
+}
+h2,
+.h2 {
+	font-size: @h2-font-size;
+	line-height: @h2-line-height;
+}
+h3,
+.h3 {
+	font-size: @h3-font-size;
+	line-height: @h3-line-height;
+}
+h4,
+.h4 {
+	font-size: @h4-font-size;
+	line-height: @h4-line-height;
+}
+h5,
+.h5 {
+	font-size: @h5-font-size;
+	line-height: @h5-line-height;
+}
+h6,
+.h6 {
+	font-size: @h6-font-size;
+	line-height: @h6-line-height;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+p,
+ul,
+ol,
+dl,
+blockquote,
+hr,
+pre,
+table,
+form,
+figure {
+	+ h2,
+	+ h3,
+	+ h4,
+	+ h5,
+	+ h6 {
+		margin-top: @base-unit * 8;
+	}
+}
+
+// Lists
+ul, ol,
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin: 0 0 0 @base-line;
+}
+ol ol li {
+	list-style-type: lower-alpha;
+}
+ol ol ol li {
+	list-style-type: lower-roman;
+}
+nav ul, nav ol {
+	margin: 0;
+	list-style: none;
+}
+dl dt {
+	font-weight: 700;
+}
+dd {
+	margin-left: @base-line;
+}

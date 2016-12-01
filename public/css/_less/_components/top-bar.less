@@ -1,0 +1,46 @@
+// MAIN
+
+.main-top-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-top-bar-logo {
+  position: relative;
+  font-size: @font-size-big;
+  font-weight: bold;
+  color: @base00;
+  :hover {
+    color: @base00;
+  }
+  ::before {
+    content: "p";
+    display: inline-block;
+    color: @base07;
+    font-weight: bold;
+    padding-right: .3em;
+  }
+  :hover::before {
+    content: "pajam";
+  }
+  ::after {
+    content: " ";
+    position: absolute;
+    top: .1em;
+    right: -0.1em;
+    z-index: -1;
+    display: inline-block;;
+    width: 1.3em;
+    height: 1.3em;
+    background: @base0D;
+  }
+}
+
+.main-top-bar-over {
+  display: block;
+  font-family: @fontOS;
+  text-align: right;
+  text-decoration: none;
+  color: @base05;
+  border-top: 1px solid @base0D;
+}

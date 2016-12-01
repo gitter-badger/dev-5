@@ -1,0 +1,51 @@
+.vers, .vers-mob {
+  margin: 0;
+  padding: 0;
+  margin-top: @base-line + @base-line-smaller/2;
+  margin-bottom: @base-line-smaller;
+  font-size: @font-size-small;
+  text-align: right;
+  list-style: none;
+  p {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    padding-left: @base-line-smaller;
+    color: @base0D;
+  }
+  li {
+    position: relative;
+    ::after {
+      content: "";
+      position: absolute;
+      top: .9em;
+      z-index: -1;
+      width: 100%;
+      display: block;
+      border-top: 1px solid @base05;
+    }
+  }
+}
+
+.vers-link {
+  position: relative;
+  padding: 0 0 0 1.5em;
+  text-decoration: none;
+  color: @base06;
+  background: @base00;
+  ::before {
+    content: "";
+    position: absolute;
+    top: .4em;
+    left: .5em;
+    display: inline-block;
+    width: .5em;
+    height: .5em;
+    background: @base0D;
+  }
+}
+
+.vers {
+  display: none;
+  border-left: 1px solid @base05;
+}
