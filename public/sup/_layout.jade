@@ -1,0 +1,15 @@
+!= partial('../_partial/head.jade')
+body.pages-body
+	!= partial('../_partial/game/game-bar.jade')
+	.pages-top
+		header.pages-header
+			h1.pages-title.pages-title-game #{ title }
+			.pages-desc
+				p #{ desc }
+			.pages-yield.pages-yield-game
+				!= yield
+		nav.pages-nav
+			!= partial('../_partial/game/game-menu.jade')
+	main.pages-list
+		!= partial('../_partial/sup/sup-lesson.jade')
+	!= partial('../_partial/footer.jade')

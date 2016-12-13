@@ -1,8 +1,8 @@
 .vers, .vers-mob {
   margin: 0;
   padding: 0;
-  margin-top: @base-line + @base-line-smaller/2;
-  margin-bottom: @base-line-smaller;
+  margin-top: @base-line;
+  margin-bottom: @base-line;
   font-size: @font-size-small;
   text-align: right;
   list-style: none;
@@ -11,7 +11,7 @@
     padding: 0;
     margin: 0;
     padding-left: @base-line-smaller;
-    color: @base0D;
+    font-family: @fontOS;
   }
   li {
     position: relative;
@@ -22,30 +22,43 @@
       z-index: -1;
       width: 100%;
       display: block;
-      border-top: 1px solid @base05;
+      border-top: 1px solid @base02;
     }
   }
 }
 
 .vers-link {
   position: relative;
-  padding: 0 0 0 1.5em;
+  padding: 0 0 0 .5em;
   text-decoration: none;
   color: @base06;
   background: @base00;
+  :hover {
+    color: @base07;
+    cursor: pointer;
+  }
   ::before {
-    content: "";
-    position: absolute;
-    top: .4em;
-    left: .5em;
+    content: "~";
     display: inline-block;
-    width: .5em;
-    height: .5em;
-    background: @base0D;
+    padding-right: 1em;
+    background: @base00;
+    color: @base0D;
+  }
+  :hover::before {
+    content: ">";
   }
 }
 
 .vers {
+  border-left: 1px solid @base02;
   display: none;
-  border-left: 1px solid @base05;
+}
+
+@media (min-width: @breakpoint-small) {
+  .vers {
+    display: block;
+  }
+  .vers-mob {
+    display: none;
+  }
 }

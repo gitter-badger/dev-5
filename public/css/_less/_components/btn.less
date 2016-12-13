@@ -1,41 +1,45 @@
 .btn {
   position: relative;
   display: block;
-  margin-right: @base-line-smaller/2;
-  margin-left: 3em;
-  margin-bottom: @base-line-smaller;
-  padding: .2em;
-  font-family: @fontOS;
+  padding: .5em 0;
   text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
-  color: @base07;
-  background: @base01;
-  box-shadow: @base-line-smaller/2 @base-line-smaller/2 0 @base0D;
+  color: @base06;
+  border-bottom: 2px dashed @base02;
   :hover {
-    color: @base07;
-    background: @base02;
+    color: @base06;
   }
   ::before {
-    content: "btn";
-    position: absolute;
-    left: -3em;
-    display: block;
-    height: 2em;
-    padding-right: .5em;
-    font-family: @fontHack;
-    line-height: 2em;
+    content: "btn | ";
+    display: inline;
     text-transform: lowercase;
-    border-right: 1px solid @base06;
+    color: @base02;
+    transition: .2s;
+  }
+  ::after {
+    content: "~>";
+    position: absolute;
+    right: 0;
+    display: inline;
+    text-align: right;
+    color: @base06;
+    opacity: 0;
+    transition: .2s;
+  }
+  :hover::before {
+    color: @base06;
+    transition: .5s;
+  }
+  :hover::after {
+    opacity: 1;
+    transition: .5s;
   }
 }
 
-// MAIN
+// PAGES-MENU
 
-.main-cont-menu-ptr::before {
-  content: "ptr";
-}
-
-.main-cont-menu-abt::before {
-  content: "abt";
+.pages-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid @base0D;
 }

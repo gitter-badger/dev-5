@@ -1,18 +1,8 @@
-.body-main {
-  padding: @base-line-smaller;
-  background: @base00;
-  color: @base06;
-}
-
-.main-cont {
-}
-
-.main-cont-title {
-  position: relative;
-  margin-top: @base-line-smaller;
-  font-family: @fontHack;
-  font-weight: bold;
+.pages-title {
+  margin: 0;
+  font-size: @h2-font-size;
   text-align: center;
+  text-transform: uppercase;
   background-image: -webkit-linear-gradient(45deg, @base00 25%, @base02 26%, @base02 50%, @base00 51%, @base00 75%, @base02 76%);
   background-image: -moz-linear-gradient(45deg, @base00 25%, @base02 26%, @base02 50%, @base00 51%, @base00 75%, @base02 76%);
   background-image: -o-linear-gradient(45deg, @base00 25%, @base02 26%, @base02 50%, @base00 51%, @base00 75%, @base02 76%);
@@ -24,40 +14,32 @@
   color: @base0D;
 }
 
-.main-cont-desc {
+.pages-desc {
   margin-top: @base-line-smaller;
-  color: @base06;
-  font-size: @font-size-small;
   font-family: @fontOS;
+  font-size: @font-size-small;
   font-style: italic;
 }
 
-.main-cont-yield {
+.pages-yield {
   position: relative;
-  margin-top: @base-line;
-  border-top: 1px solid @base07;
-  border-bottom: 1px solid @base07;
+  margin: @base-line 0;
+  padding: 0 1em;
+  border: 1px solid @base02;
   ::before {
-    content: "#";
+    content: "+";
     position: absolute;
-    top: -.9em;
-    left: 0;
-    padding: 0 .5em 0 0;
+    bottom: 0;
+    left: -.3em;
+    color: @base0D;
     background: @base00;
   }
   ::after {
-    content: "#";
+    content: "+";
     position: absolute;
-    bottom: -.8em;
-    right: 0;
-    padding: 0 0 0 .5em;
+    top: 0;
+    right: -.3em;
+    color: @base0D;
     background: @base00;
   }
-}
-
-.main-cont-menu {
-  margin: 0;
-  margin-top: @base-line;
-  padding: 0;
-  list-style: none;
 }
