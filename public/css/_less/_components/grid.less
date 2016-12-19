@@ -5,6 +5,7 @@
 .bar {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 //// pages-top
@@ -54,5 +55,14 @@
     min-width: 20em;
     margin-left: @base-line-smaller/2;
     margin-right: @base-line-smaller/2;
+  }
+}
+
+// ARTCL
+
+@media (min-width: @breakpoint-small) {
+  .artcl-text {
+    width: 80%;
+    margin: 0 auto;
   }
 }

@@ -1,0 +1,12 @@
+if current.source === 'index' && current.path.length === 1
+  h1.pages-title #{ title }
+  .pages-desc
+    p #{ desc }
+  .pages-yield
+    != yield
+else if current.path[current.path.length - 2] === 'sup'
+  h1.pages-title.pages-title-game #{ title }
+  .pages-desc
+    p #{ desc }
+  .pages-yield.pages-yield-game
+    != yield

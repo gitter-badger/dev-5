@@ -1,0 +1,16 @@
+if current.source === 'index' && current.path.length === 1
+  ul.pages-menu
+    for point, slug in public._data
+      if _.includes(point.tags, 'menu')
+        li
+          a.menu(href= point.link)
+            span #{ slug }
+            p= point.title
+else if current.path[current.path.length - 2] === 'sup'
+  ul.pages-menu.pages-menu-game
+    for point, slug in public.sup._data
+      if _.includes(point.tags, 'menu')
+        li
+          a.menu(href= point.link)
+            span #{ slug }
+            p= point.title

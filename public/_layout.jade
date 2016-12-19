@@ -1,18 +1,13 @@
 != partial('_partial/head.jade')
 body.pages-body
-	!= partial('_partial/main/main-bar.jade')
+	!= partial('_partial/top-bar.jade')
 	.pages-top
 		header.pages-header
-			h1.pages-title #{ title }
-			.pages-desc
-				p #{ desc }
-			.pages-yield
-				!= yield
+			!= partial('_partial/pages-header.jade')
 		nav.pages-nav
-			!= partial('_partial/main/main-menu.jade')
-			!= partial('_partial/vers-mob.jade')
-			!= partial('_partial/vers.jade')
+			!= partial('_partial/pages-menu.jade')
+			if current.source === 'index' && current.path.length === 1
+				!= partial('_partial/vers.jade')
 	main.pages-list
-		!= partial('_partial/game/game-list.jade')
-		!= partial('_partial/audio/audio-list.jade')
+		!= partial('_partial/pages-list.jade')
 	!= partial('_partial/footer.jade')

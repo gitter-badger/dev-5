@@ -6,18 +6,19 @@ body {
 
 // Links
 a {
-	color: @base0D;
+	color: @base00;
 }
 a:hover {
-	color: @base0C;
+	color: @base00;
 }
 
 // Headings
 h1.title, h1, h2, h3, h4, h5, h6 {
-	font-family: @fontHack;
-	font-weight: bold;
+	font-family: @fontOS;
+	font-weight: normal;
 	text-rendering: optimizeLegibility;
 	margin-bottom: @heading-margin-bottom;
+	color: @base03;
 }
 h1.title {
 	font-size: @title-font-size;
@@ -26,7 +27,9 @@ h1.title {
 h1,
 .h1 {
 	font-size: @h1-font-size;
+	font-weight: bold;
 	line-height: @h1-line-height;
+	color: @base00;
 }
 h2,
 .h2 {
@@ -97,4 +100,40 @@ dl dt {
 }
 dd {
 	margin-left: @base-line;
+}
+
+// IMG
+
+img {
+	position: relative;
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: .5em 0;
+	background: none;
+}
+
+// QUOTE
+
+blockquote {
+	position: relative;
+	margin: @base-line 0;
+	padding: 0 1em;
+	border: 1px solid @base04;
+	::before {
+		content: "!";
+		position: absolute;
+		bottom: 0;
+		left: -.3em;
+		color: @base00;
+		background: @base07;
+	}
+	::after {
+		content: "!";
+		position: absolute;
+		top: 0;
+		right: -.3em;
+		color: @base00;
+		background: @base07;
+	}
 }

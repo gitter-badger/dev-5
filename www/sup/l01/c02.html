@@ -1,0 +1,93 @@
+<!DOCTYPE html><html><head><title>p_DEV</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/css/style.css"></head></html><body class="artcl-body"><div class="overlay"></div><aside class="artcl-sidebar"><div class="bar"><div class="bar-left"><a id="pajam-logo" href="/sup" class="bar-logo bar-logo-game">p</a><span class="bar-span">Superpower</span></div><a href="#" class="side-toggle-close">esc |</a></div><div class="sidebar-header"><span class="sidebar-header-span">l01 |</span><h1 class="sidebar-header-h1">Пин-Понг</h1></div><div class="sidebar-desc"><p>Знакомимся с движком, языком TypeScript и создаем свою первую игру на Superpowers!</p></div><ul class="pages-menu pages-menu-game sidebar-list"><li><a href="#" class="btn"><span>index</span><p>О курсе</p></a></li><li><a href="#" class="btn"> <span>ch001</span><p>Введение и План игры</p></a></li><li><a href="#" class="btn"><span>ch002</span><p>Подготовка Superpowers</p></a></li><li><a href="#" class="btn"><span>ch003</span><p>Программирование игровой логики</p></a></li><li><a href="#" class="btn"><span>ch004</span><p>Полировка игры</p></a></li><li><a href="#" class="btn"><span>ch005</span><p>Код готовой игры</p></a></li></ul></aside><div class="artcl-left"></div><div class="artcl-rigth"><div class="artcl-text-top artcl-text-top-game"><span>sup / l01 / c02</span></div><main class="artcl-text artcl-text-game"><h1>Подготовка Superpowers</h1><h2>Создание структуры проекта</h2><blockquote>
+<p>Я предполагаю, что вы уже установили Superpowers и немного с ним поработали, потому мы переходим сразу к игре. Если вам нужно изучить основы работы с приложением, пожалуйста прочитайте <a href="docs/start/setting_up">официальную документацию</a>.</p>
+</blockquote>
+<p>Мы запустили сервер и создали <strong>новый проект</strong>, который называется <code>PongTutorial</code>.</p>
+<p>Начнем с создания ассета <strong>Scene</strong> <em>(Сцена)</em> (Нажмите <code>new asset</code> <em>(создать ассет)</em> или <code>ctrl+n</code>) с названием <strong>Game</strong> <em>(Игра)</em>.</p>
+<p>В <strong>settings</strong> <em>(настройках)</em>, мы поместим Game в <strong>Startup Scene</strong> <em>(Начальная Сцена)</em> (перетащите или напишите Game). Должна появиться серая метка. И установим <strong>Screen ratio</strong> <em>(Соотношение экрана)</em> на (400, 300).</p>
+<p>Давайте созадим папки для ассетов: GameSprites для Спрайтов, GameSounds для Звуков и GameScripts для Скриптов.</p>
+<p>Теперь создадим новые ассеты: 4 Sprites <em>(Спрайты)</em>, 3 Sounds <em>(Звуки)</em> и 2 Scripts <em>(Скрипты)</em>, также добавим ассет Font <em>(Шрифт)</em>:</p>
+<blockquote>
+<p>Порядок папок и ассетов не имеет значения.</p>
+</blockquote>
+<ul>
+<li>Game</li>
+<li>GameSprites<ul>
+<li>background</li>
+<li>pad1</li>
+<li>pad2</li>
+<li>ball</li>
+</ul>
+</li>
+<li>GameScripts<ul>
+<li>Ball</li>
+<li>Paddles</li>
+</ul>
+</li>
+<li>GameSounds<ul>
+<li>tac</li>
+<li>toc</li>
+<li>tada</li>
+</ul>
+</li>
+<li>Font</li>
+</ul>
+<p><img src="https://github.com/mseyne/superpowers-tutorials/blob/master/1SuperPong/img/settingassets.png?raw=true" alt="settingassets.png"></p>
+<h2>Загрузка игровых ассетов</h2><p><em>Ассет похож на коробку, которая содержит какой-то элемент игры. Это может быть изображение, скрипт, звук и т.д.</em></p>
+<p>Мы построили структуру игровых ассетов, но они останутся пустыми, если мы не вложим в них содержание (файлы для спрайтов и звуков, код для скриптов).</p>
+<p>Сначала вам нужно загрузить ассеты с <a href="https://github.com/mseyne/superpowers-sources/tree/master/1SuperPong">github репозитория</a>.</p>
+<p>Ассеты спрайтов и звуков должны быть загружены внутрь проекта. Для каждого ассета, мы загружаем связанный с ним файл. (Например, background.png в ассет backgound)</p>
+<p>Для ассетов спрайтов нужна настройка с <strong>установкой размера сетки</strong>, она должна быть такой же, как размер самого изображения, потому что мы не будем использовать кадры в этой игре. Мы таеже оставим стандартные значения frames/row <em>(кадры/строка)</em> и frames/column <em>(кадры/столбец)</em>, равные 1 для обоих.</p>
+<p>Для каждого ассаета Спрайта, мы изменим значение рендеринг <strong>Pixels / Unit</strong> <em>(Пиксели / единица)</em>, которое по умолчанию 100, на 50.</p>
+<p>Мы не будем изменять <strong>основу</strong> у наших спрайтов. Значение по умолчанию в % (50, 50) это означает, что основа находится по центру и это подходит для всех спрайтов нашей игры.</p>
+<p>Вот, для примера, pad2 с правильными настройками.</p>
+<p><img src="https://github.com/mseyne/superpowers-tutorials/raw/master/1SuperPong/img/spriteset.png" alt="spriteset.png"></p>
+<p>В Ассете Font <em>(Шрифт)</em>, изменим <strong>Pixels / Unit</strong> <em>(Пиксели / Единица)</em> на 100 и <strong>Size</strong> <em>(Размер)</em> на 64.</p>
+<p>После загрузки звукового файла в ассет Sound <em>(Звук)</em>, все должно быть в порядке, вы просто можете проверить каждый звук.</p>
+<p>На этом мы закончили с ассетами и можем переходить к построению игровой сцены.</p>
+<h2>Построение сцены</h2><p><em>Сцена - это экран, на котором все объекты (так называемые Актеры) соединены друг с другом.</em></p>
+<p>Теперь мы установим все объекты в сцену. Объекты внутри сцены называются Actor <em>(Актер)</em>.</p>
+<p>Для начала, чтобы видеть других Актеров в игре, нам нужен Актер Camera <em>(Камера)</em>.</p>
+<blockquote>
+<p>Для навигации внутри сцены, мы можем переключать режим камеры 2D / 3D, подробнее смотрите в документации.</p>
+</blockquote>
+<p>Создадим <strong>new actor</strong> <em>(нового актера)</em> с именем <strong>Camera</strong> <em>(Камера)</em>.</p>
+<p>Установим <strong>position</strong> <em>(позицию)</em> по оси Z (третья) на 5, чтобы поместить камеру спереди всех других объектов, у которых позиция по оси Z меньше 5:</p>
+<p>Добавим <strong>new component</strong> <em>(новый компонент)</em> Camera.</p>
+<p>И изменим режим на <strong>Orthographic</strong> <em>(Ортогональный)</em>.</p>
+<p>Затем установим <strong>Orthographic Scale</strong> <em>(Ортогональный Масштаб)</em> на 6. (Мы делаем это для того, чтобы соответствовать фону)</p>
+<p><img src="https://github.com/mseyne/superpowers-tutorials/raw/master/1SuperPong/img/camera.png" alt="camera.png"></p>
+<p>Создадим всех Актеров нашей игры и организуем их следующим образом:</p>
+<p><img src="https://github.com/mseyne/superpowers-tutorials/raw/master/1SuperPong/img/actors.png" alt="actors.png"></p>
+<p>Добавим <strong>новый компонент Sprite Renderer</strong> <em>(Рендер Спрайта)</em> в Актера Background <em>(Фон)</em> и перетащим Спрайт фона в Sprite <em>(Спрайт)</em>. (или пропишем путь GameSprites/background)</p>
+<p>Проделаем этот шаг для Актера Мяча <em>(Ball)</em>, Ракеток <em>(Paddle)</em> Первого Игрока <em>(Player1)</em> и Второго <em>(Player2)</em>. Для каждого мы добавим новый компонент Sprite Renderer и присоединим соответствующий Спрайт <em>(Sprite)</em>. Pad1 для Paddle Первого Игрока и т.д.</p>
+<p>Создадим новый компонент <strong>Text Renderer</strong> <em>(Рендер Текста)</em> для каждого Актера Score <em>(Счет)</em> и перетащим Шрифт в поле Font <em>(Шрифт)</em>. Напишем 0 в поле Text <em>(Текст)</em>.</p>
+<blockquote>
+<p>Когда проекты станут больше, есть возможность просто дублировать Актеров, чтобы не повторять эти действия, но так как мы учимся, повторение этого шага имеет важное значение.</p>
+</blockquote>
+<p>Теперь внутри сцены есть все необходимое.</p>
+<p>Теперь нужно правильно установить <strong>позиции</strong> всех Актеров, чтобы все выглядело красиво, когда мы запустим игру.</p>
+<p>Мы уже установили позицию Актера Camera на (0, 0, 5), вот позиции для всех остальных Актеров:</p>
+<ul>
+<li>Background (0, 0, 0)</li>
+<li>Ball (0, 0, 4)</li>
+<li>Player1 (0, 0, 0)<ul>
+<li>Paddle (-3.7, 0, 4)</li>
+<li>Score (-2, 2.5, 2)</li>
+</ul>
+</li>
+<li>Player2 (0, 0, 0)<ul>
+<li>Paddle (3.7, 0, 4)</li>
+<li>Score (2, 2.5, 2)</li>
+</ul>
+</li>
+</ul>
+<p>Для завершения, мы можем установить цвет для каждого Актера Score, вы можете сделать это, нажав на маленький флажок рядом с параметром Color <em>(Цвет)</em> и выбрать его. Вот шестнадцатеричные коды цветов:</p>
+<ul>
+<li>Player 1 – Score : f14735</li>
+<li>Player 2 – Score : 356ef1</li>
+</ul>
+<p>Хорошо, все Актеры размешены, мы можем запустить игру, чтобы убедиться, что все выглядит правильно. В даннный момент, мы не можем ни с чем взаимодействовать и это нормально. Для этого нам нужно начать программировать логику игры. Однако есть последний шаг, прежде чем мы перейдем к коду. Нужно добавить Физические Тела нашим спрайтам, они должны быть твердыми, чтобы просиходили столкновения между мячом и ракетками.</p>
+<h2>Настройка Arcade Bodies</h2><p>В Сцене Game <em>(Игра)</em>, нужно добавить новые компоненты <strong>Arcade Body 2D</strong> <em>(Аркадное Тело 2D)</em> к Paddles <em>(Ракеткам)</em> и Ball <em>(Мячу)</em>.</p>
+<p>Затем изменим размер у обоих ракеток на 0.2 для x и оставим 1 для y (size = 0.2, 1), и у мяча на 0.2 для x и y (size = 0.2, 0.2). Таким образом размер тел будет такимже, как размер спрайтов.</p>
+<p>В игре будет казаться, что мячь сталкивается с ракетками. На самом деле это физическое тело мяча сталкивается с физическими телами ракеток, а спрайты просто прикреплены и следуют за ними.</p>
+<p><img src="https://github.com/mseyne/superpowers-tutorials/raw/master/1SuperPong/img/arcadebody.png" alt="arcadebody.png"></p></main></div><div class="bar bottom-bar bottom-bar-game"><div class="bar-left"><a id="pajam-logo" href="/" class="bar-logo bar-logo-artcl-game">p</a><span class="bar-span bar-span-artcl">Superpowers</span></div><a href="#" class="side-toggle-open">toc |</a></div><script type="text/javascript" src="../../js/sidebar.js"></script></body>

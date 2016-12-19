@@ -3,10 +3,6 @@
   font-size: @font-size-big;
   font-weight: bold;
   color: @base06;
-  text-decoration: none;
-  :hover {
-    color: @base06;
-  }
   ::after {
     content: "_";
     display: inline-block;
@@ -30,6 +26,17 @@
   }
 }
 
+.bar-logo-link {
+  text-decoration: none;
+}
+
+.bar-slug {
+  display: inline-block;
+  margin-left: .5em;
+  font-weight: bold;
+  color: @base06;
+}
+
 .bar-over {
   // display: none;
   font-family: @fontOS;
@@ -39,8 +46,26 @@
   border-top: 1px solid @base0D;
 }
 
-.bar-span {
-  display: inline-block;
-  margin-left: .5em;
-  font-weight: bold;
+//// artcl
+
+.artcl-text-top-game {
+  position: relative;
+  flex: 1;
+  margin-left: @base-line-smaller;
+  text-align: right;
+  ::before {
+    content: "";
+    position: absolute;
+    top: .7em;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    border-top: 1px solid @base00;
+  }
+  > span {
+    padding-left: @base-line-smaller;
+    font-size: @font-size-small;
+    background: @base07;
+    color: @base0D;
+  }
 }

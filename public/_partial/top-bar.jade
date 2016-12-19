@@ -1,0 +1,20 @@
+.bar
+  .bar-left
+    if current.source === 'index' && current.path.length === 1
+      a.bar-logo-link(href="#")
+        span#pajam-logo.bar-logo pajam
+    else if current.path[current.path.length - 2] === 'sup'
+      a.bar-logo-link(href="/")
+        span.bar-logo.bar-logo-game p
+        span.bar-slug DEV
+    else if current.path[current.path.length - 3] === 'sup'
+      a.bar-logo-link.bar-logo-link-artcl(href="/sup")
+        span.bar-logo.bar-logo-game-artcl p
+        span.bar-slug.bar-slug-artcl Superpowers
+  .bar-right
+    if current.source === 'index' && current.path.length === 1
+      a.bar-path.bar-path-link(href="#") другие проекты
+    else if current.source === 'index' && current.path.length === 2
+      span.bar-path= current.path.join(' / ')
+    else 
+      span.bar-path-artcl= current.path.join(' / ')

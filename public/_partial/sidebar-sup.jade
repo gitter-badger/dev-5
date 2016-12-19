@@ -1,0 +1,25 @@
+.bar
+  .bar-left
+    a.bar-logo-link(href="/")
+      span.bar-logo.bar-logo-game p
+      span.bar-slug Superpowers
+  a.side-toggle-close(href="#") esc |
+if current.path[current.path.length - 2] === 'lv01'
+  for point, slug in public.sup.lv01._data
+    if _.includes(point.tags, 'level')
+      .sidebar-header
+        span.sidebar-header-span= point.slug + ' | '
+        if current.source === 'index'
+          h1.sidebar-header-h1= point.title
+        else
+          a.sidebar-header-link(href="#{ slug }")
+            h1.sidebar-header-h1= point.title
+      .sidebar-desc
+        p= point.desc
+  ul.pages-menu.pages-menu-game.sidebar-list
+    for point, slug in public.sup.lv01._data
+      if _.includes(point.tags, 'ch')
+        li
+          a.menu(href="#{ slug }")
+            span #{ slug }
+            p= point.title

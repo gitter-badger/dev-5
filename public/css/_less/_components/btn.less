@@ -1,19 +1,16 @@
-.btn {
+.menu {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: flex-start;
   padding: .5em 0;
   text-decoration: none;
   color: @base06;
   border-bottom: 2px dashed @base02;
   :hover {
     color: @base06;
-  }
-  ::before {
-    content: "btn | ";
-    display: inline;
-    text-transform: lowercase;
-    color: @base02;
-    transition: .2s;
+    > span {
+      color: @base06;
+    }
   }
   ::after {
     content: "~>";
@@ -25,13 +22,24 @@
     opacity: 0;
     transition: .2s;
   }
-  :hover::before {
-    color: @base06;
-    transition: .5s;
-  }
   :hover::after {
     opacity: 1;
     transition: .5s;
+  }
+  > span {
+    display: block;
+    color: @base02;
+    white-space: nowrap;
+    ::after {
+      content: "|";
+      display: inline-block;
+      margin: 0 .7em;
+    }
+  }
+  > p {
+    display: block;
+    margin: 0;
+    text-align: left;
   }
 }
 
