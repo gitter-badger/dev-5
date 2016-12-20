@@ -17,7 +17,7 @@ section.pages-list-cat
             h3.pages-list-cat-item-title= point.title
             p.pages-list-cat-item-desc= point.desc
   else if current.path[current.path.length - 2] === 'sup'
-    h2.pages-list-cat-title Игры
+    h2.pages-list-cat-title Курсы
     for point, slug in public.sup._data
       if _.includes(point.tags, 'level')
         article.pages-list-cat-item.pages-list-cat-item-game

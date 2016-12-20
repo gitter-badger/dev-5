@@ -66,12 +66,26 @@
   color: @base02;
 }
 
-.bar-path-link {
+a.bar-path-link {
   text-decoration: none;
   text-transform: uppercase;
-  color: @base0D;
-  ::hover {
-    text-decoration: line-through;
+  color: @base06;
+  ::before {
+    content: "~ ";
+    font-weight: bold;
     color: @base0D;
+  }
+  :hover::before {
+    content: "> ";
+  }
+}
+
+@media (max-width: @breakpoint-small) {
+  .bar-logo-link-artcl {
+    display: none;
+  }
+
+  .bar-right-artcl {
+    margin-left: 0;
   }
 }

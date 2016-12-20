@@ -22,11 +22,40 @@
   color: @base06;
   text-decoration: none;
   vertical-align: baseline;
+  ::after {
+    content: " ~";
+  }
+  :hover {
+    color: @base06;
+    ::after {
+      content: " X"
+    }
+  }
 }
 
 .sidebar-header {
+  position: relative;
   display: flex;
   margin-top: @base-line;
+  ::after {
+    content: "~>";
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: @h1-font-size;
+    color: @base06;
+    opacity: 0;
+    transition: .5s;
+  }
+  :hover {
+    ::after {
+      opacity: 1;
+      transition: .5s;
+    }
+    > .sidebar-header-span {
+      color: @base06;
+    }
+  }
 }
 
 .sidebar-header-span {
@@ -50,17 +79,17 @@
   margin: @base-line 0;
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: -100vw;
-  z-index: 5;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: @base0C;
-  opacity: 0;
-  transition: 1s;
+.active-point {
+  color: @base02;
+  pointer-events: none;
+  text-decoration: none;
+  ::after {
+    opacity: 1;
+    color: @base02;
+  }
+  > .sidebar-header-h1 {
+    color: @base03;
+  }
 }
 
 @media (min-width: @breakpoint-small) {

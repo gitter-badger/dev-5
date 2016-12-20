@@ -5,7 +5,6 @@ var overlay = document.querySelector(".overlay");
 var bottomBar = document.querySelector(".bottom-bar");
 
 function openBar() {
-  event.preventDefault();
   sidebar.style.top="0";
   bottomBar.style.bottom="-50vh";
   overlay.style.left="0";
@@ -14,19 +13,20 @@ function openBar() {
 }
 
 function closeBar() {
-  event.preventDefault();
   sidebar.style.top="-100vh";
   bottomBar.style.bottom="0";
-  overlay.style.left="200vw";
+  overlay.style.left="-100vw";
   overlay.style.opacity="0";
   document.body.style.overflow = "";
 }
 
 sidebarOpen.addEventListener("click", function(event) {
+  event.preventDefault();
   openBar();
 });
 
 sidebarClose.addEventListener("click", function(event) {
+  event.preventDefault();
   closeBar();
 });
 

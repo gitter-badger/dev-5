@@ -27,7 +27,7 @@
 .pages-list-cat-item-link {
   display: block;
   text-decoration: none;
-  color: @base05;
+  color: @base06;
   :hover {
     cursor: pointer;
     color: @base07;
@@ -60,7 +60,7 @@
   font-family: @fontHack;
   font-size: @font-size-regular;
   font-weight: bold;
-  line-height: 2em;
+  line-height: 2.5em;
   color: @base06;
   ::after {
     content: "~>";
@@ -78,4 +78,31 @@
   margin: 0;
   padding: .5em 0;
   border-top: 2px dashed @base02;
+}
+
+@media (min-width: @breakpoint-small) {
+  .pages-list {
+    width: 70%;
+    margin-left: @base-line;
+  }
+
+  .pages-list-cat {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .pages-list-cat-title {
+    flex: 1 100%;
+    margin-left: @base-line-smaller/2;
+    margin-right: @base-line-smaller/2;
+  }
+
+  .pages-list-cat-item {
+    flex: 1 40%;
+    min-width: 20em;
+    margin-left: @base-line-smaller/2;
+    margin-right: @base-line-smaller/2;
+  }
 }

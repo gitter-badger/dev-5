@@ -1,25 +1,18 @@
 var pajamLogo = document.getElementById("pajam-logo");
+var pajamTrigger = document.querySelector(".bar-logo-link");
 
 function pajamLogoAdd(x) {
   pajamLogo.innerHTML = x;
 }
 
 function pajamLogoAnim() {
-  setTimeout(pajamLogoAdd, 0, "p%");
-  setTimeout(pajamLogoAdd, 50, "p@&");
-  setTimeout(pajamLogoAdd, 100, "p{</");
-  setTimeout(pajamLogoAdd, 150, "p*|@#");
-  setTimeout(pajamLogoAdd, 200, "pajam");
+  setTimeout(pajamLogoAdd, 0, "p%j*^");
+  setTimeout(pajamLogoAdd, 100, "p@&am");
+  setTimeout(pajamLogoAdd, 200, "p{<a/");
+  setTimeout(pajamLogoAdd, 300, "*a\@#");
+  setTimeout(pajamLogoAdd, 400, "pajam");
 }
 
-function pajamLogoClear() {
-  pajamLogo.innerHTML = "p";
-}
-
-pajamLogo.onmouseover = function(event) {
+pajamTrigger.onmouseover = function(event) {
   pajamLogoAnim();
-}
-
-pajamLogo.onmouseout = function(event) {
-  setTimeout(pajamLogoClear, 201);
 }

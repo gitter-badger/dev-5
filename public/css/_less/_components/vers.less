@@ -1,4 +1,4 @@
-.vers, .vers-mob {
+.vers {
   margin: 0;
   padding: 0;
   margin-top: @base-line;
@@ -6,13 +6,6 @@
   font-size: @font-size-small;
   text-align: right;
   list-style: none;
-  p {
-    text-align: left;
-    padding: 0;
-    margin: 0;
-    padding-left: @base-line-smaller;
-    font-family: @fontOS;
-  }
   li {
     position: relative;
     ::after {
@@ -33,9 +26,9 @@
   text-decoration: none;
   color: @base06;
   background: @base00;
+  cursor: pointer;
   :hover {
     color: @base07;
-    cursor: pointer;
   }
   ::before {
     content: "~";
@@ -46,19 +39,5 @@
   }
   :hover::before {
     content: ">";
-  }
-}
-
-.vers {
-  border-left: 1px solid @base02;
-  display: none;
-}
-
-@media (min-width: @breakpoint-small) {
-  .vers {
-    display: block;
-  }
-  .vers-mob {
-    // display: none;
   }
 }

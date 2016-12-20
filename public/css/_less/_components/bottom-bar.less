@@ -7,11 +7,17 @@
   background: @base0D;
 }
 
-.side-toggle-open {
-  font-weight: bold;
+.bar-logo-link {
   text-decoration: none;
 }
 
-.bar-logo-link {
+.side-toggle-open {
+  font-weight: bold;
   text-decoration: none;
+  ::after {
+    content: " ~";
+  }
+  :hover::after {
+    content: " <";
+  }
 }
