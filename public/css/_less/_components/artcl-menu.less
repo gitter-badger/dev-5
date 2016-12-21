@@ -1,0 +1,62 @@
+.artcl-menu {
+  position: fixed;
+  bottom: 30%;
+  right: 0;
+  width: 8%;
+  transition: 1s;
+}
+
+.artcl-menu-list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.artcl-menu-item {
+  position: absolute;
+  width: 100%;
+  ::before {
+    content: "";
+    position: absolute;
+    top: .75em;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    border-top: 1px solid @base04;
+  }
+}
+
+.artcl-menu-top {
+  left: 50vw;
+  transition: .5s;
+}
+
+.artcl-menu-toc {
+  top: 2em;
+}
+
+.artcl-menu-link {
+  padding-right: .5em;
+  text-decoration: none;
+  color: @base04;
+  background: @base07;
+  transition: .5s;
+  ::after {
+    content: " ~";
+    color: @base0D;
+    font-weight: bold;
+  }
+  :hover {
+    transition: .5s;
+    ::after {
+      content: " <";
+    }
+  }
+}
+
+@media (max-width: @breakpoint-small) {
+  .artcl-menu {
+    display: none;
+  }
+}

@@ -1,41 +1,72 @@
-var sidebarOpen = document.querySelector(".side-toggle-open");
-var sidebar = document.querySelector(".artcl-sidebar");
-var sidebarClose = document.querySelector(".side-toggle-close");
-var overlay = document.querySelector(".overlay");
+var sideBar = document.querySelector(".artcl-sidebar");
+var sideBarCloseToggle = document.querySelector(".side-toggle-close");
+var sideBarBottomToggle = document.querySelector(".side-toggle-open");
+var sideBarMenuToggle = document.querySelector(".artcl-menu-toc-toggle");
 var bottomBar = document.querySelector(".bottom-bar");
+var artclMenu = document.querySelector(".artcl-menu");
+var overlay = document.querySelector(".overlay");
 
-function openBar() {
-  sidebar.style.top="0";
-  bottomBar.style.bottom="-50vh";
+function sideBarOpen() {
+  sideBar.style.top="0";
   overlay.style.left="0";
   overlay.style.opacity="0.8";
   document.body.style.overflow = "hidden";
 }
 
-function closeBar() {
-  sidebar.style.top="-100vh";
-  bottomBar.style.bottom="0";
+function sideBarClose() {
+  sideBar.style.top="-100vh";
   overlay.style.left="-100vw";
   overlay.style.opacity="0";
   document.body.style.overflow = "";
 }
 
-sidebarOpen.addEventListener("click", function(event) {
+function bottomBarOpen() {
+  bottomBar.style.bottom="0";
+}
+
+function bottomBarClose() {
+  bottomBar.style.bottom="-50vh";
+}
+
+function artclMenuOpen() {
+  artclMenu.style.right="0";
+}
+
+function artclMenuClose() {
+  artclMenu.style.right="-50vw";
+}
+
+sideBarBottomToggle.addEventListener("click", function(event) {
   event.preventDefault();
-  openBar();
+  sideBarOpen();
+  bottomBarClose();
+  artclMenuClose();
 });
 
-sidebarClose.addEventListener("click", function(event) {
+sideBarMenuToggle.addEventListener("click", function(event) {
   event.preventDefault();
-  closeBar();
+  sideBarOpen();
+  bottomBarClose();
+  artclMenuClose();
+});
+
+sideBarCloseToggle.addEventListener("click", function(event) {
+  event.preventDefault();
+  sideBarClose();
+  bottomBarOpen();
+  artclMenuOpen();
 });
 
 overlay.addEventListener("click", function(event) {
-  closeBar();
+  sideBarClose();
+  bottomBarOpen();
+  artclMenuOpen();
 });
 
 window.addEventListener("keydown", function(event) {
   if (event.keyCode === 27) {
-    closeBar();
+    sideBarClose();
+    bottomBarOpen();
+    artclMenuOpen();
   }
 });
