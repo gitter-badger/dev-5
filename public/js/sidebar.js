@@ -5,6 +5,7 @@ var sideBarMenuToggle = document.querySelector(".artcl-menu-toc-toggle");
 var bottomBar = document.querySelector(".bottom-bar");
 var artclMenu = document.querySelector(".artcl-menu");
 var overlay = document.querySelector(".overlay");
+var sideBarHeaderToggle = document.querySelector(".artcl-header-toc-link");
 
 function sideBarOpen() {
   sideBar.style.top="0";
@@ -49,6 +50,13 @@ sideBarMenuToggle.addEventListener("click", function(event) {
   bottomBarClose();
   artclMenuClose();
 });
+
+// sideBarHeaderToggle.addEventListener("click", function(event) {
+//   event.preventDefault();
+//   sideBarOpen();
+//   bottomBarClose();
+//   artclMenuClose();
+// });
 
 sideBarCloseToggle.addEventListener("click", function(event) {
   event.preventDefault();

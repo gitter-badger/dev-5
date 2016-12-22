@@ -1,8 +1,8 @@
 .artcl-menu {
   position: fixed;
-  bottom: 30%;
   right: 0;
-  width: 8%;
+  width: 25%;
+  margin-top: @base-line;
   transition: 1s;
 }
 
@@ -28,12 +28,9 @@
 }
 
 .artcl-menu-top {
+  top: 2em;
   left: 50vw;
   transition: .5s;
-}
-
-.artcl-menu-toc {
-  top: 2em;
 }
 
 .artcl-menu-link {
@@ -49,9 +46,25 @@
   }
   :hover {
     transition: .5s;
+    cursor: pointer;
     ::after {
       content: " <";
     }
+    > span::after {
+      color: @base02;
+      transition: .5s;
+    }
+  }
+}
+
+.artcl-menu-link-toc {
+  color: @base02;
+  display: inline;
+  transition: 1s;
+  opacity: 1;
+  ::after {
+    content: " | ";
+    color: @base04;
   }
 }
 
