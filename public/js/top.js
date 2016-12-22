@@ -23,15 +23,11 @@ setTimeout(function run() {
   if(top > 50) {
     topLi.style.left="0vw";
     menu.style.width="8%";
-    setTimeout(function close() {
-      menuSpan.style.display="none";
-    }, 500);
+    menuSpan.style.display="none";
   } else {
     topLi.style.left="50vw";
     menu.style.width="25%";
-    setTimeout(function open() {
-      menuSpan.style.display="inline";
-    }, 500);
+    menuSpan.style.display="inline";
   }
   setTimeout(run, 100);
 }, 100);

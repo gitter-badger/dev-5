@@ -1,0 +1,11 @@
+.bar
+  .bar-left
+    a.bar-logo-link(href="/")
+      span.bar-logo p
+      span.bar-slug Dev
+  a.side-toggle-close(href="#") esc
+h1.log-title История Изменений
+ul.vers
+  for point, slug in public.log._data
+    li
+      a.vers-link(href='#{ slug }' class="#{ current.source === slug ? 'active-log' : '' }")= point.title

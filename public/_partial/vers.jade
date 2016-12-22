@@ -1,3 +1,5 @@
 ul.vers
-  li
-    a.vers-link(href='#') v2.00.14 / 27.11.16
+  for point, slug in public.log._data
+    if _.includes(point.tags, 'last')
+      li
+        a.vers-link(href='log/#{ slug }')= point.title

@@ -7,3 +7,10 @@
         a.artcl-menu-link.artcl-menu-toc-toggle.artcl-menu-link-game(href="#")
           span.artcl-menu-link-toc Содержание
           span TOC
+    else if current.path[current.path.length - 2] === 'log'
+      li.artcl-menu-item.artcl-menu-top
+        a.artcl-menu-link.artcl-menu-top-toggle.artcl-menu-link-game(href="#") TOP
+      li.artcl-menu-item.artcl-menu-toc
+        a.artcl-menu-link.artcl-menu-toc-toggle.artcl-menu-link-game(href="#")
+          span.artcl-menu-link-toc История
+          span LOG

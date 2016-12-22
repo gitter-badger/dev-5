@@ -5,3 +5,10 @@ if current.path[current.path.length - 3] === 'sup'
         span.bar-logo.bottom-bar-logo-artcl-game p
         span.bar-slug.bottom-bar-slug-artcl Superpowers
     a.side-toggle-open(href="#") TOC
+else if current.path[current.path.length - 2] === 'log'
+  .bar.bottom-bar
+    .bar-left
+      a.bar-logo-link(href="/")
+        span.bar-logo.bottom-bar-logo-artcl p
+        span.bar-slug.bottom-bar-slug-artcl Dev
+    a.side-toggle-open(href="#") LOG

@@ -1,0 +1,14 @@
+!= partial('../_partial/head.jade')
+body.artcl-body
+  .artcl-back
+  .overlay.overlay-game
+  aside.artcl-sidebar
+    != partial('../_partial/sidebar-log.jade')
+  != partial('../_partial/top-bar.jade')
+  != partial('../_partial/artcl-menu.jade')
+  main.artcl-text.artcl-text-game
+    != yield
+    != partial('../_partial/artcl-footer.jade')
+  != partial('../_partial/bottom-bar.jade')
+  script(type='text/javascript' src='../js/sidebar.js')
+  script(type='text/javascript' src='../js/top.js')
