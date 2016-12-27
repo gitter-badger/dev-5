@@ -16,7 +16,7 @@
   },
   "abo": {
     "title": "О проекте",
-    "link": "#",
+    "link": "/about",
     "tags": ["menu"]
   },
   "pat": {

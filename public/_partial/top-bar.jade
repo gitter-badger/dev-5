@@ -3,6 +3,9 @@
     if current.source === 'index' && current.path.length === 1
       a.bar-logo-link(href="#")
         span#pajam-logo.bar-logo pajam
+    else if current.path[current.path.length - 2] === 'about'
+      a.bar-logo-link(href="/")
+        span#pajam-logo.bar-logo pajam
     else if current.path[current.path.length - 2] === 'sup'
       a.bar-logo-link(href="/")
         span.bar-logo.bar-logo-game p
