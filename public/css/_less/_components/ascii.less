@@ -1,0 +1,18 @@
+.ascii-title {
+  display: none;
+}
+
+@media (min-width: @breakpoint-small) {
+  .ascii-title {
+    position: fixed;
+    bottom: 20rem;
+    right: 15rem;
+    z-index: -1;
+    display: block;
+    font-size: @font-size-small;
+    white-space: pre;
+    transform: rotate(-90deg);
+    transform-origin: 100% 0%;
+    color: @base02;
+  }
+}

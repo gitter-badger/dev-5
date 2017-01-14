@@ -5,9 +5,10 @@ body.pages-body
 		header.pages-header
 			!= partial('_partial/pages-header.jade')
 		nav.pages-nav
-			!= partial('_partial/pages-menu.jade')
 			if current.source === 'index' && current.path.length === 1
 				!= partial('_partial/vers.jade')
+			!= partial('_partial/pages-menu.jade')
 	main.pages-list
 		!= partial('_partial/pages-list.jade')
-	!= partial('_partial/footer.jade')
+		!= partial('_partial/footer.jade')
+	!= partial('_partial/ascii.jade')

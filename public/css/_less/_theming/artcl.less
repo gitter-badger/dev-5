@@ -1,15 +1,13 @@
 // GAME
 
 .artcl-text-game {
-  a {
-    color: @base0C;
-  }
-  a:hover {
-    color: @base00;
-  }
-  img {
-    border-top: 1px solid @base0C;
-    border-bottom: 2px dashed @base04;
+  > h2, h3, h4 {
+    ::after {
+      content: "_";
+      font-family: @fontHack;
+      font-weight: bold;
+      color: @base0C;
+    }
   }
 }
 

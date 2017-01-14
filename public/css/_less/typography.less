@@ -1,4 +1,5 @@
 body {
+	position: relative;
 	font-family: @fontHack;
 	line-height: @base-line;
 	font-size: @font-size-regular;
@@ -83,7 +84,7 @@ ul ul,
 ol ol,
 ul ol,
 ol ul {
-	margin: 0 0 0 @base-line;
+	margin: 0;
 }
 ol ol li {
 	list-style-type: lower-alpha;
@@ -109,7 +110,7 @@ img {
 	display: block;
 	max-width: 100%;
 	margin: 0 auto;
-	padding: .5em 0;
+	padding: 0 .5em;
 	background: none;
 }
 
@@ -121,19 +122,28 @@ blockquote {
 	padding: 0 1em;
 	border: 1px solid @base04;
 	::before {
-		content: "!";
+		content: "?(O_O)?";
 		position: absolute;
-		bottom: 0;
-		left: -.3em;
+		top: -.7em;
+		left: .7em;
+		padding: 0 .5em;
 		color: @base00;
 		background: @base07;
 	}
-	::after {
-		content: "!";
-		position: absolute;
-		top: 0;
-		right: -.3em;
-		color: @base00;
-		background: @base07;
-	}
+	// ::after {
+	// 	content: "@";
+	// 	position: absolute;
+	// 	top: 0;
+	// 	right: -.3em;
+	// 	color: @base00;
+	// 	background: @base07;
+	// }
+}
+
+// CODE
+
+code {
+	padding: .2em;
+	border: 1px dashed @base04;
+	color: @base03;
 }

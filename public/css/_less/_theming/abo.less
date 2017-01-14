@@ -1,14 +1,19 @@
 .abo-cont-title {
   padding-bottom: @base-line;
   margin-bottom: @base-line;
+  font-size: @font-size-small;
   text-align: center;
   white-space: pre;
   border-bottom: 2px dashed @base02;
-  text-shadow: 0em .7em 0em @base08;
+  text-shadow: 0em .85em 0em @base08;
   color: @base0D;
 }
 
 @media (min-width: @breakpoint-small) {
+  .abo-cont-title {
+    font-size: @font-size-big;
+    text-shadow: 0em .6em 0em @base08;
+  }
   .abo-cont {
     width: 80%;
     margin: 0 auto;
