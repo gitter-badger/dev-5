@@ -1,29 +1,24 @@
-.bar
-  .bar-left
+.top-bar
+  .top-bar__left
     if current.source === 'index' && current.path.length === 1
-      a.bar-logo-link(href="#")
-        span#pajam-logo.bar-logo pajam
+      a.logo.logo--main(href="http://pajam.pw/") pajam
     else if current.path[current.path.length - 2] === 'about'
-      a.bar-logo-link(href="/")
-        span#pajam-logo.bar-logo pajam
+      a.logo.logo--main(href="/") pajam
     else if current.path[current.path.length - 2] === 'sup'
-      a.bar-logo-link(href="/")
-        span.bar-logo.bar-logo-game p
-        span.bar-slug DEV
+      a.logo.logo--game(href="/") p
+        span.logo__slug DEV
     else if current.path[current.path.length - 3] === 'sup'
-      a.bar-logo-link.bar-logo-link-artcl(href="/sup")
-        span.bar-logo.bar-logo-game-artcl p
-        span.bar-slug.bar-slug-artcl Superpowers
+      a.logo.logo--game-artcl(href="/sup") p
+        span.logo__slug Sup
     else if current.path[current.path.length - 2] === 'log'
-      a.bar-logo-link.bar-logo-link-artcl(href="/")
-        span.bar-logo.bar-logo-artcl p
-        span.bar-slug.bar-slug-artcl DEV
+      a.logo.logo--main-artcl(href="/") p
+        span.logo__slug DEV
   if current.source === 'index' && current.path.length === 1
-    .bar-right
-      a.bar-path.bar-path-link(href="#") другие проекты
+    .top-bar__right.top-bar__right--pages
+      a.top-bar__link(href="#") другие проекты
   else if current.source === 'index' && current.path.length === 2
-    .bar-right
-      span.bar-path= current.path.join(' / ')
+    .top-bar__right.top-bar__right--pages
+      span.top-bar__path= current.path.join(' / ')
   else 
-    .bar-right.bar-right-artcl
-      span.bar-path.bar-path-artcl= current.path.join(' / ')
+    .top-bar__right.top-bar__right--artcl
+      span.top-bar__path= current.path.join(' / ')

@@ -1,28 +1,39 @@
-if current.path.length <= 2
-  .footer
-    .footer-license.footer-license-pages
-      a.footer-license-a(rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/")
-        img.footer-license-img(alt="Лицензия Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png")
-    .footer-line.footer-line-pages
-    .footer-links.footer-links-pages
-      ul
-        li
-          a(href="https://vk.com/pajam" title="vk.com") vk
-        li
-          a(href="https://twitter.com/pajam_tw" title="twitter") tw
-        li
-          a(href="https://pajam.tumblr.com/" title="tumblr") tu
+if current.path[current.path.length - 2] === 'log'
+  .footer.footer--artcl
+    .footer__license
+      a.footer__license-link(rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/")
+        img.footer__license-img(alt="Лицензия Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png")
+    .footer__social
+      ul.footer__social-list
+        li.footer__social-item
+          a.footer__social-link(href="https://vk.com/pajam" title="vk.com") vk
+        li.footer__social-item
+          a.footer__social-link(href="https://twitter.com/pajam_tw" title="twitter") tw
+        li.footer__social-item
+          a.footer__social-link(href="https://pajam.tumblr.com/" title="tumblr") tu
+else if current.path.length <= 2
+  .footer.footer--pages
+    .footer__license
+      a.footer__license-link(rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/")
+        img.footer__license-img(alt="Лицензия Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png")
+    .footer__social
+      ul.footer__social-list
+        li.footer__social-item
+          a.footer__social-link(href="https://vk.com/pajam" title="vk.com") vk
+        li.footer__social-item
+          a.footer__social-link(href="https://twitter.com/pajam_tw" title="twitter") tw
+        li.footer__social-item
+          a.footer__social-link(href="https://pajam.tumblr.com/" title="tumblr") tu
 else
-  .footer
-    .footer-license.footer-license-artcl
-      a.footer-license-a(rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/")
-        img.footer-license-img(alt="Лицензия Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png")
-    .footer-line.footer-line-artcl
-    .footer-links.footer-links-artcl
-      ul
-        li
-          a(href="https://vk.com/pajam" title="vk.com") vk
-        li
-          a(href="https://twitter.com/pajam_tw" title="twitter") tw
-        li
-          a(href="https://pajam.tumblr.com/" title="tumblr") tu
+  .footer.footer--artcl
+    .footer__license
+      a.footer__license-link(rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/")
+        img.footer__license-img(alt="Лицензия Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png")
+    .footer__social
+      ul.footer__social-list
+        li.footer__social-item
+          a.footer__social-link(href="https://vk.com/pajam" title="vk.com") vk
+        li.footer__social-item
+          a.footer__social-link(href="https://twitter.com/pajam_tw" title="twitter") tw
+        li.footer__social-item
+          a.footer__social-link(href="https://pajam.tumblr.com/" title="tumblr") tu

@@ -1,27 +1,28 @@
-section.pages-list-cat
-  if current.source === 'index' && current.path.length === 1
-    h2.pages-list-cat-title Игры
-    for point, slug in public._data
-      if _.includes(point.tags, 'game')
-        article.pages-list-cat-item.pages-list-cat-item-game
-          a.pages-list-cat-item-link(href="#{ slug }")
-            span.pages-list-cat-item-slug #{ slug }
-            h3.pages-list-cat-item-title= point.title
-            p.pages-list-cat-item-desc= point.desc
-    h2.pages-list-cat-title Аудио
-    for point, slug in public._data
-      if _.includes(point.tags, 'audio')
-        article.pages-list-cat-item.pages-list-cat-item-audio
-          a.pages-list-cat-item-link(href="#{ slug }")
-            span.pages-list-cat-item-slug #{ slug }
-            h3.pages-list-cat-item-title= point.title
-            p.pages-list-cat-item-desc= point.desc
-  else if current.path[current.path.length - 2] === 'sup'
-    h2.pages-list-cat-title Курсы
-    for point, slug in public.sup._data
-      if _.includes(point.tags, 'level')
-        article.pages-list-cat-item.pages-list-cat-item-game
-          a.pages-list-cat-item-link(href="#{ slug }")
-            span.pages-list-cat-item-slug #{ slug }
-            h3.pages-list-cat-item-title= point.title
-            p.pages-list-cat-item-desc= point.desc
+main.pages__main
+  section.section
+    if current.source === 'index' && current.path.length === 1
+      h2.section__title Игры
+      for point, slug in public._data
+        if _.includes(point.tags, 'game')
+          article.section__item.section__item--game
+            a.section__link(href="#{ slug }")
+              span.section__slug #{ slug }
+              h3.section__name= point.title
+              p.section__desc= point.desc
+      h2.section__title Аудио
+      for point, slug in public._data
+        if _.includes(point.tags, 'audio')
+          article.section__item.section__item--audio
+            a.section__link(href="#{ slug }")
+              span.section__slug #{ slug }
+              h3.section__name= point.title
+              p.section__desc= point.desc
+    else if current.path[current.path.length - 2] === 'sup'
+      h2.section__title Курсы
+      for point, slug in public.sup._data
+        if _.includes(point.tags, 'level')
+          article.section__item.section__item--game
+            a.section__link(href="#{ slug }")
+              span.section__slug #{ slug }
+              h3.section__name= point.title
+              p.section__desc= point.desc

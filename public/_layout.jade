@@ -1,14 +1,10 @@
 != partial('_partial/head.jade')
-body.pages-body
+body.pages
 	!= partial('_partial/top-bar.jade')
-	.pages-top
-		header.pages-header
+	.pages__top
+		header.header
 			!= partial('_partial/pages-header.jade')
-		nav.pages-nav
-			if current.source === 'index' && current.path.length === 1
-				!= partial('_partial/vers.jade')
+		nav.pages__menu
 			!= partial('_partial/pages-menu.jade')
-	main.pages-list
-		!= partial('_partial/pages-list.jade')
-		!= partial('_partial/footer.jade')
-	!= partial('_partial/ascii.jade')
+	!= partial('_partial/pages-list.jade')
+	!= partial('_partial/footer.jade')

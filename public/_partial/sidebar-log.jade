@@ -1,11 +1,18 @@
-.bar
-  .bar-left
-    a.bar-logo-link(href="/")
-      span.bar-logo p
-      span.bar-slug Dev
-  a.side-toggle-close(href="#") esc
-h1.log-title История Изменений
-ul.vers
-  for point, slug in public.log._data
-    li
-      a.vers-link(href='#{ slug }' class="#{ current.source === slug ? 'active-log' : '' }")= point.title
+aside.sidebar
+  .top-bar
+    .top-bar__left
+      a.logo.logo--main(href="/") p
+        span.logo__slug DEV
+    .top-bar__right.top-bar__right--pages
+      a.top-bar__link.side-toggle-close(href="#") esc
+  h1.sidebar__log-title История Изменений
+  ul.menu.menu--main
+    li.menu__item
+      a.menu__link.menu--active(href='#')
+        span.menu__slug ....next
+        p.menu__name Дальше, будет больше
+    for point, slug in public.log._data
+      li.menu__item
+        a.menu__link(href='#{ slug }' class="#{ current.source === slug ? 'menu--active' : '' }")
+          span.menu__slug #{ slug }
+          p.menu__name= point.title

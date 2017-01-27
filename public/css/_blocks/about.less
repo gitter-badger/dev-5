@@ -1,0 +1,52 @@
+.about {
+  color: @color03;
+
+  h2, h3, h4, h5, h6 {
+    color: @color06;
+
+    ::after {
+      content: " _";
+
+      font-weight: bold;
+
+      color: @color0D;
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    color: @color02;
+    border-bottom: 1px solid @color0D;
+
+    :hover {
+      color: @color07;
+    }
+  }
+
+  @media (min-width: @breakpoint-small) {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @breakpoint-medium) {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+.about__title {
+  margin: @base-line*2 0;
+
+  font-size: @font-size-small;
+
+  text-align: center;
+  white-space: pre;
+
+  color: @color0D;
+  text-shadow: 0 .8em 0 @color08;
+
+  @media (min-width: @breakpoint-small) {
+    font-size: @font-size-regular;
+  }
+}

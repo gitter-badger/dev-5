@@ -1,0 +1,132 @@
+.header {
+  @media (min-width: @breakpoint-small) {
+    flex: 2 50%;
+  }
+}
+
+.header__title {
+  position: relative;
+
+  margin: 0;
+  padding: .5em;
+
+  font-family: @fontHack;
+  font-size: @title-font-size;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  ::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: -@base-line;
+    z-index: -1;
+
+    display: block;
+    width: 150vw;
+    height: 100%;
+
+    background-image: -webkit-linear-gradient(45deg, @color00 25%, @color01 26%, @color01 50%, @color00 51%, @color00 75%, @color01 76%);
+    background-image: -moz-linear-gradient(45deg, @color00 25%, @color01 26%, @color01 50%, @color00 51%, @color00 75%, @color01 76%);
+    background-image: -o-linear-gradient(45deg, @color00 25%, @color01 26%, @color01 50%, @color00 51%, @color00 75%, @color01 76%);
+    background-image: linear-gradient(45deg, @color00 25%, @color01 26%, @color01 50%, @color00 51%, @color00 75%, @color01 76%);
+    background-size: @base-line-smaller @base-line-smaller;
+    -moz-background-size: @base-line-smaller @base-line-smaller;
+    -webkit-background-size: @base-line-smaller @base-line-smaller;
+    background-repeat: repeat;
+
+    @media (min-width: @breakpoint-small) {
+      right: 0;
+    }
+  }
+}
+
+.header__title--main {
+  color: @color0D;
+}
+
+.header__title--game {
+  color: @color0C;
+}
+
+.header__vers {
+  position: relative;
+
+  margin: @base-line-smaller 0;
+  padding: 0;
+
+  list-style: none;
+  text-align: right;
+
+  ::before {
+    content: "";
+
+    position: absolute;
+    top: .8em;
+    z-index: -1;
+
+    display: block;
+    width: 100%;
+    height: 1px;
+
+    background: @color01;
+  }
+}
+
+.header__vers-link {
+  text-decoration: none;
+
+  color: @color07;
+  background: @color00;
+
+  ::before {
+    content: "~";
+
+    padding: 0 .5em;
+
+    color: @color01;
+    transition: .5s;
+  }
+
+  :hover {
+    ::before {
+      content: ">";
+
+      color: @color07;
+      transition: .5s;
+    }
+  }
+}
+
+.header__desc {
+  margin: @base-line-smaller 0;
+  font-family: @fontOS;
+  font-size: @font-size-small;
+  font-style: italic;
+  color: @color04;
+}
+
+.header__yield {
+  position: relative;
+
+  margin: @base-line-smaller 0 @base-line;
+  padding: 0 @base-line;
+
+  color: @color04;
+  border: 1px solid @color01;
+
+  ::after {
+    content: "(*°ｰ°)ﾉ";
+
+    position: absolute;
+    top: -.7em;
+    left: 1em;
+
+    padding: 0 .5em;
+
+    color: @color01;
+    background: @color00;
+  }
+}

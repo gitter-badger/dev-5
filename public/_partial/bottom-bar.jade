@@ -1,14 +1,14 @@
 if current.path[current.path.length - 3] === 'sup'
-  .bar.bottom-bar.bottom-bar-game
-    .bar-left
-      a.bar-logo-link(href="/sup")
-        span.bar-logo.bottom-bar-logo-artcl-game p
-        span.bar-slug.bottom-bar-slug-artcl Superpowers
-    a.side-toggle-open(href="#") TOC
+  .bottom-bar
+    ul.menu.menu--game.menu--artcl
+      li.menu__item
+        a.menu__link.bottom-bar-toc-toggle(href="#")
+          span.menu__slug -toc
+          p.menu__name Содержание
 else if current.path[current.path.length - 2] === 'log'
-  .bar.bottom-bar
-    .bar-left
-      a.bar-logo-link(href="/")
-        span.bar-logo.bottom-bar-logo-artcl p
-        span.bar-slug.bottom-bar-slug-artcl Dev
-    a.side-toggle-open(href="#") LOG
+  .bottom-bar
+    ul.menu.menu--main.menu--artcl
+      li.menu__item
+        a.menu__link.bottom-bar-toc-toggle(href="#")
+          span.menu__slug -log
+          p.menu__name История

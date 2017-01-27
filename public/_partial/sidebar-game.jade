@@ -1,0 +1,23 @@
+aside.sidebar
+  .top-bar
+    .top-bar__left
+      a.logo.logo--game(href="/#{ current.path[0] }") p
+        span.logo__slug #{ current.path[0] }
+    .top-bar__right.top-bar__right--pages
+      a.top-bar__link.side-toggle-close(href="#") esc
+  if current.path[current.path.length - 2] === 'lv01'
+    for point, slug in public[current.path[0]][current.path[1]]._data
+      if _.includes(point.tags, 'level')
+        ul.menu.menu--game.menu--header
+          li.menu__item
+            a.menu__link(href="#{ slug }" class="#{ current.source === slug ? 'menu--active' : '' }")
+              span.menu__slug= point.slug
+              h1.menu__name= point.title
+        p.sidebar__desc= point.desc
+    ul.menu.menu--game
+      for point, slug in public[current.path[0]][current.path[1]]._data
+        if _.includes(point.tags, 'ch')
+          li.menu__item
+            a.menu__link(href="#{ slug }" class="#{ current.source === slug ? 'menu--active' : '' }")
+              span.menu__slug #{ slug }
+              p.menu__name= point.title

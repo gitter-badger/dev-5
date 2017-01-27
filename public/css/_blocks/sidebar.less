@@ -1,0 +1,41 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -100%;
+  z-index: 15;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: @base-line-smaller;
+
+  background: @color00;
+
+  overflow: auto;
+  box-sizing: border-box;
+  transition: 1s;
+
+  @media (min-width: @breakpoint-small) {
+    width: 50%;
+  }
+}
+
+.sidebar__desc {
+  font-family: @fontOS;
+  font-style: italic;
+  font-size: @font-size-small;
+
+  color: @color04;
+
+  ::before {
+    content: "~ ";
+  }
+}
+
+.sidebar__log-title {
+  margin: @base-line 0;
+  text-align: center;
+
+  color: @color07;
+}

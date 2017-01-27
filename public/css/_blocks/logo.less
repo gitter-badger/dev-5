@@ -1,0 +1,125 @@
+.logo {
+  position: relative;
+
+  padding-left: .1em;
+
+  font-size: @font-size-big;
+  font-weight: bold;
+
+  text-decoration: none;
+
+  ::before {
+    content: "";
+
+    position: absolute;
+    top: .1em;
+    right: 0;
+    z-index: -1;
+
+    display: inline-block;
+    width: 1.3em;
+    height: 1.3em;
+
+    transition: .5s;
+  }
+
+  ::after {
+    content: "_";
+
+    display: inline;
+    padding: 0 .1em 0 .4em;
+
+    font-weight: bold;
+  }
+
+  :hover {
+    color: @color00;
+    transition: .5s;
+
+    ::before {
+    width: 100%;
+    }
+  }
+}
+
+.logo__slug {
+  position: absolute;
+  left: 100%;
+  top: .1em;
+
+  padding: 0 @base-line-smaller;
+
+  font-size: @font-size-small;
+  font-weight: normal;
+  line-height: @base-line;
+
+  text-transform: uppercase;
+}
+
+.logo--main {
+  color: @color07;
+
+  ::before {
+    background: @color0D;
+  }
+
+  ::after {
+    animation: main 1s infinite;
+  }
+
+  .logo__slug {
+    color: @color07;
+    background: @color01;
+  }
+}
+
+.logo--game {
+  color: @color07;
+
+  ::before {
+    background: @color0C;
+  }
+
+  ::after {
+    animation: game 1s infinite;
+  }
+
+  .logo__slug {
+    color: @color07;
+    background: @color01;
+  }
+}
+
+.logo--main-artcl {
+  color: @color00;
+
+  ::before {
+    background: @color0D;
+  }
+
+  ::after {
+    animation: main-artcl 1s infinite;
+  }
+
+  .logo__slug {
+    color: @color00;
+    background: @color06;
+  }
+}
+
+.logo--game-artcl {
+  color: @color00;
+
+  ::before {
+    background: @color0C;
+  }
+
+  ::after {
+    animation: game-artcl 1s infinite;
+  }
+
+  .logo__slug {
+    color: @color00;
+    background: @color06;
+  }
+}

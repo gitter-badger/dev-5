@@ -1,0 +1,30 @@
+.pages {
+  padding: @base-line-smaller;
+
+  background: @color00;
+  color: @color07;
+}
+
+.pages__top {
+  @media (min-width: @breakpoint-small) {
+    display: flex;
+  }
+}
+
+.pages__menu {
+  @media (min-width: @breakpoint-small) {
+    margin: 0 0 0 @base-line;
+    flex: 1 40%;
+  }
+}
+
+.pages__main {
+  @media (min-width: @breakpoint-small) {
+    margin: @base-line 0 @base-line 5%;
+    padding: 0 @base-line-smaller/2;
+  }
+
+  @media (min-width: @breakpoint-medium) {
+    margin: @base-line 20% @base-line 5%;
+  }
+}

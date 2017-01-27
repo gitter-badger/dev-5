@@ -5,21 +5,13 @@ body {
 	font-size: @font-size-regular;
 }
 
-// Links
-a {
-	color: @base00;
-}
-a:hover {
-	color: @base00;
-}
-
 // Headings
 h1.title, h1, h2, h3, h4, h5, h6 {
 	font-family: @fontOS;
 	font-weight: normal;
 	text-rendering: optimizeLegibility;
 	margin-bottom: @heading-margin-bottom;
-	color: @base03;
+	color: @color03;
 }
 h1.title {
 	font-size: @title-font-size;
@@ -30,7 +22,7 @@ h1,
 	font-size: @h1-font-size;
 	font-weight: bold;
 	line-height: @h1-line-height;
-	color: @base00;
+	color: @color00;
 }
 h2,
 .h2 {
@@ -120,30 +112,21 @@ blockquote {
 	position: relative;
 	margin: @base-line 0;
 	padding: 0 1em;
-	border: 1px solid @base04;
+	border: 1px solid @color04;
 	::before {
-		content: "?(O_O)?";
+		content: " 	__φ(。。)";
 		position: absolute;
 		top: -.7em;
-		left: .7em;
+		right: .7em;
 		padding: 0 .5em;
-		color: @base00;
-		background: @base07;
+		color: @color04;
+		background: @color07;
 	}
-	// ::after {
-	// 	content: "@";
-	// 	position: absolute;
-	// 	top: 0;
-	// 	right: -.3em;
-	// 	color: @base00;
-	// 	background: @base07;
-	// }
 }
 
 // CODE
 
 code {
-	padding: .2em;
-	border: 1px dashed @base04;
-	color: @base03;
+	border-bottom: 1px dashed @color04;
+	color: @color03;
 }

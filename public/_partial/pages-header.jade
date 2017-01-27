@@ -1,12 +1,15 @@
 if current.source === 'index' && current.path.length === 1
-  h1.pages-title #{ title }
-  .pages-desc
-    p #{ desc }
-  .pages-yield
+  h1.header__title.header__title--main #{ title }
+  ul.header__vers
+    for point, slug in public.log._data
+      if _.includes(point.tags, 'last')
+        li
+          a.header__vers-link(href='log/#{ slug }') #{ slug }
+  .header__yield
     != yield
 else if current.path[current.path.length - 2] === 'sup'
-  h1.pages-title.pages-title-game #{ title }
-  .pages-desc
+  h1.header__title.header__title--game #{ title }
+  .header__desc
     p #{ desc }
-  .pages-yield.pages-yield-game
+  .header__yield
     != yield

@@ -1,0 +1,153 @@
+.section {
+  @media (min-width: @breakpoint-small) {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+
+.section__title {
+  position: relative;
+
+  font-family: @fontOS;
+  font-size: @font-size-regular;
+  line-height: 1.2em;
+  font-weight: normal;
+
+  text-align: right;
+  text-transform: uppercase;
+
+  color: @color02;
+
+  ::before {
+    content: ">>>";
+
+    position: absolute;
+    left: 0;
+
+    display: block;
+
+    font-family: @fontHack;
+
+    text-align: left;
+
+    color: @color02;
+  }
+
+  @media (min-width: @breakpoint-small) {
+    flex: 1 100%;
+  }
+}
+
+.section__item {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: @base-line-small;
+  padding: 0;
+
+  border-bottom: 1px solid @color01;
+
+  @media (min-width: @breakpoint-small) {
+    flex: 1 40%;
+    min-width: 20em;
+  }
+
+  :nth-of-type(2n) {
+    @media (min-width: @breakpoint-small) {
+      margin-left: @base-line-small;
+    }
+  }
+}
+
+.section__link {
+  display: block;
+  margin: 0;
+  padding: .5em 0 0;
+
+  text-decoration: none;
+
+  color: @color07;
+  transition: .5s;
+
+  :hover {
+    .section__slug {
+      color: @color00;
+
+      ::before {
+        width: 100%;
+      }
+
+      ::after {
+        content: "<";
+
+        color: @color00;
+      }
+    }
+  }
+}
+
+.section__slug {
+  position: relative;
+
+  display: inline;
+
+  margin-right: .5em;
+  color: @color02;
+
+  ::before {
+    content: "";
+
+    position: absolute;
+    top: -.2em;
+    left: 0;
+    z-index: -1;
+
+    display: block;
+    width: 0;
+    height: 1.5em;
+
+    transition: .3s;
+  }
+
+  ::after {
+    content: "~";
+
+    padding: 0 .2em 0 .5em;
+
+    color: @color02;
+  }
+}
+
+.section__name {
+  display: inline;
+
+  font-family: @fontHack;
+  font-size: @font-size-regular;
+  line-height: 1.5em;
+
+  color: @color07;
+}
+
+.section__desc {
+  margin: 0;
+  padding: .5em 0 .5em @base-line;
+  color: @color04;
+}
+
+.section__item--game {
+  border-top: 2px solid @color0C;
+
+  .section__slug::before {
+    background: @color0C;
+  }
+}
+
+.section__item--audio {
+  border-top: 2px solid @color0B;
+
+  .section__slug::before {
+    background: @color0B;
+  }
+}

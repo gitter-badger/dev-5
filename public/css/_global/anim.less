@@ -1,0 +1,36 @@
+.logo-amin(@back-color; @font-color) {
+  0% {
+    color: @back-color;
+  }
+  50% {
+    color: @font-color;
+  }
+  100% {
+    color: @back-color;
+  }
+}
+
+@keyframes main {
+  .logo-amin(@color00; @color0D);
+}
+
+@keyframes game {
+  .logo-amin(@color00; @color0C);
+}
+
+@keyframes game-artcl {
+  .logo-amin(@color07; @color0C);
+}
+
+@keyframes main-artcl {
+  .logo-amin(@color07; @color0D);
+}
+
+@keyframes contrib {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

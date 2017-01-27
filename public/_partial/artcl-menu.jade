@@ -1,16 +1,47 @@
 .artcl-menu
-  ul.artcl-menu-list
+  .artcl-menu__top
     if current.path[current.path.length - 3] === 'sup'
-      li.artcl-menu-item.artcl-menu-top
-        a.artcl-menu-link.artcl-menu-top-toggle.artcl-menu-link-game(href="#") TOP
-      li.artcl-menu-item.artcl-menu-toc
-        a.artcl-menu-link.artcl-menu-toc-toggle.artcl-menu-link-game(href="#")
-          span.artcl-menu-link-toc Содержание
-          span TOC
+      ul.menu.menu--game.menu--artcl
+        li.menu__item
+          a.menu__link.artcl-menu-toc-toggle(href="#")
+            span.menu__slug -toc
+            p.menu__name Содержание
+        if next === 'end'
+          li.menu__item
+            a.menu__link(href="/#{ current.path[0] }")
+              span.menu__slug home
+              p.menu__name Другие курсы
+        else if next === "start"
+          li.menu__item
+            a.menu__link(href="ch01")
+              span.menu__slug ch01
+              p.menu__name Начать
+        else
+          li.menu__item
+            a.menu__link(href="#{ next }")
+              span.menu__slug #{ next }
+              p.menu__name Следующий
+        li.menu__item
+          a.menu__link(href="https://github.com/pajamhub/dev/edit/master/public/" + current.path.join('/') + ".md")
+            span.menu__slug @git
+            p.menu__name GitHub
+      p.artcl-menu__edit Если вы знаете, как сделать эту статью лучше, можете изменить её на GitHub! Мы рады любой помощи!
     else if current.path[current.path.length - 2] === 'log'
-      li.artcl-menu-item.artcl-menu-top
-        a.artcl-menu-link.artcl-menu-top-toggle.artcl-menu-link-game(href="#") TOP
-      li.artcl-menu-item.artcl-menu-toc
-        a.artcl-menu-link.artcl-menu-toc-toggle.artcl-menu-link-game(href="#")
-          span.artcl-menu-link-toc История
-          span LOG
+      ul.menu.menu--main.menu--artcl
+        li.menu__item
+          a.menu__link.artcl-menu-toc-toggle(href="#")
+            span.menu__slug -log
+            p.menu__name История
+  .artcl-menu__bottom
+    if current.path[current.path.length - 3] === 'sup'
+      ul.menu.menu--game.menu--artcl
+        li.menu__item.artcl-menu-top
+          a.menu__link.artcl-menu-top-toggle(href="#") 
+            span.menu__slug ^top
+            p.menu__name Вверх
+    else if current.path[current.path.length - 2] === 'log'
+      ul.menu.menu--main.menu--artcl
+        li.menu__item.artcl-menu-top
+          a.menu__link.artcl-menu-top-toggle(href="#") 
+            span.menu__slug ^top
+            p.menu__name Вверх

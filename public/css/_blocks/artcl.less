@@ -1,0 +1,105 @@
+.artcl {
+  padding: @base-line-smaller;
+
+  background: @color07;
+  color: @color02;
+}
+
+.artcl__back {
+  display: none;
+
+  @media (min-width: @breakpoint-small) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+
+    display: block;
+    width: 5%;
+    height: 100%;
+
+    background-image: -webkit-linear-gradient(45deg, @color07 25%, @color06 26%, @color06 50%, @color07 51%, @color07 75%, @color06 76%);
+    background-image: -moz-linear-gradient(45deg, @color07 25%, @color06 26%, @color06 50%, @color07 51%, @color07 75%, @color06 76%);
+    background-image: -o-linear-gradient(45deg, @color07 25%, @color06 26%, @color06 50%, @color07 51%, @color07 75%, @color06 76%);
+    background-image: linear-gradient(45deg, @color07 25%, @color06 26%, @color06 50%, @color07 51%, @color07 75%, @color06 76%);
+    background-size: @base-line-smaller @base-line-smaller;
+    -moz-background-size: @base-line-smaller @base-line-smaller;
+    -webkit-background-size: @base-line-smaller @base-line-smaller;
+    background-repeat: repeat;
+  }
+}
+
+.artcl__overlay {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 12;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  transition: .5s;
+}
+
+.artcl__overlay--game {
+  background: @color0C;
+}
+
+.artcl__overlay--main {
+  background: @color0D;
+}
+
+.artcl__text {
+  @media (min-width: @breakpoint-small) {
+    margin: 0 10% 0 5%;
+    padding: 0 @base-line-smaller;
+  }
+
+  @media (min-width: @breakpoint-medium) {
+    margin: 0 20% 0 5%;
+  }
+
+  h2, h3, h4, h5, h6 {
+    ::after {
+      content: " _";
+
+      font-weight: bold;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: @color03;
+
+    :hover {
+      color: @color00;
+    }
+  }
+}
+
+.artcl__text--game {
+  h2, h3, h4, h5, h6 {
+    ::after {
+      color: @color0C;
+    }
+  }
+
+  a {
+    border-bottom: 1px solid @color0C;
+  }
+}
+
+.artcl__text--main {
+  h2, h3, h4, h5, h6 {
+    ::after {
+      color: @color0D;
+    }
+  }
+
+  a {
+    border-bottom: 1px solid @color0D;
+  }
+}

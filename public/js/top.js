@@ -21,13 +21,11 @@ topToggle.addEventListener("click", function(event) {
 setTimeout(function run() {
   var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
   if(top > 50) {
-    topLi.style.left="0vw";
-    menu.style.width="8%";
-    menuSpan.style.display="none";
+    topLi.style.display="block";
+    menu.style.marginTop="0";
   } else {
-    topLi.style.left="50vw";
-    menu.style.width="25%";
-    menuSpan.style.display="inline";
+    topLi.style.display="none";
+    menu.style.marginTop="48px";
   }
   setTimeout(run, 100);
 }, 100);

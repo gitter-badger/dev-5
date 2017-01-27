@@ -3,18 +3,22 @@
     "slug": "lv01",
     "title": "Пин-Понг",
     "desc": "Знакомимся с движком, языком TypeScript и создаем свою первую игру на Superpowers!",
+    "next": "start",
     "tags": ["level"]
   },
   "ch01": {
     "title": "Введение и План игры",
+    "next": "ch02",
     "tags": ["ch"]
   },
   "ch02": {
     "title": "Подготовка Superpowers",
+    "next": "ch03",
     "tags": ["ch"]
   },
   "ch03": {
     "title": "Программирование игровой логики",
+    "next": "end",
     "tags": ["ch"]
   },
   "ch04": {

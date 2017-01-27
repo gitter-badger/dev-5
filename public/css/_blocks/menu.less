@@ -1,0 +1,147 @@
+.menu {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.menu__item {
+  margin: 0;
+  padding: 0;
+}
+
+.menu__link {
+  display: flex;
+  align-items: flex-start;
+
+  text-decoration: none;
+
+  :hover {
+    .menu__slug {
+      color: @color00;
+
+      ::before {
+        width: 100%;
+      }
+
+      ::after {
+        color: @color00;
+      }
+    }
+  }
+}
+
+.menu__slug {
+  position: relative;
+
+  display: block;
+  margin-right: .5em;
+  padding: .5em 0;
+
+  transition: .5s;
+
+  ::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    z-index: -1;
+
+    display: block;
+    width: 0;
+    height: 1.5em;
+
+    transition: .3s;
+  }
+
+  ::after {
+    content: "~";
+
+    padding: 0 .2em 0 .5em;
+  }
+}
+
+.menu__name {
+  display: block;
+  margin: 0;
+  padding: .5em 0;
+
+  text-align: left;
+}
+
+.menu--main {
+  border-top: 2px solid @color0D;
+
+  .menu__item {
+    border-bottom: 1px solid @color01;
+  }
+
+  .menu__slug {
+    color: @color02;
+
+    ::before {
+      background: @color0D;
+    }
+  }
+
+  .menu__name {
+    color: @color07;
+  }
+}
+
+.menu--game {
+  border-top: 2px solid @color0C;
+
+  .menu__item {
+    border-bottom: 1px solid @color01;
+  }
+
+  .menu__slug {
+    color: @color02;
+
+    ::before {
+      background: @color0C;
+    }
+  }
+
+  .menu__name {
+    color: @color07;
+  }
+}
+
+.menu--artcl {
+  .menu__item {
+    border-bottom: 1px solid @color06;
+  }
+
+  .menu__slug {
+    color: @color05;
+  }
+
+  .menu__name {
+    color: @color00;
+  }
+}
+
+.menu--header {
+  margin-top: @base-line;
+
+  border: none;
+
+  .menu__item {
+    border: none;
+  }
+
+  .menu__name {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.menu--active {
+  pointer-events: none;
+
+  .menu__name {
+    color: @color02;
+  }
+}
