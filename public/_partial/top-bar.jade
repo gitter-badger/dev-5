@@ -15,7 +15,8 @@
         span.logo__slug DEV
   if current.source === 'index' && current.path.length === 1
     .top-bar__right.top-bar__right--pages
-      a.top-bar__link(href="#") другие проекты
+      //- a.top-bar__link.top-bar__link--over(href="#") другие проекты
+      span.top-bar__path= current.path.join(' / ')
   else if current.source === 'index' && current.path.length === 2
     .top-bar__right.top-bar__right--pages
       span.top-bar__path= current.path.join(' / ')

@@ -2,17 +2,38 @@
   "sup": {
     "title": "Superpowers",
     "desc": "Инструмент с открытым исходным кодом для создания 3D и 2D HTML5 игр. Использует язык TypeScript.",
-    "tags": ["game"]
+    "soon": "Скоро...",
+    "tags": ["game", "soon"]
   },
   "def": {
     "title": "Defold",
     "desc": "Бесплатный мультиплатформенный инструмент для создания 2D игр от компании King. Использует язык Lua.",
-    "tags": ["game"]
+    "soon": "Когда-нибудь...",
+    "tags": ["game", "soon"]
   },
   "gib": {
     "title": "Gibber",
     "desc": "Веб-инструмент для аудио-визуального лайв-коддинга, основанный на языке JavaScript.",
-    "tags": ["audio"]
+    "soon": "Скоро...",
+    "tags": ["audio", "soon"]
+  },
+  "spi": {
+    "title": "sonicPi",
+    "desc": "",
+    "soon": "Когда-нибудь...",
+    "tags": ["audio", "soon"]
+  },
+  "vvv": {
+    "title": "vvvv",
+    "desc": "",
+    "soon": "Когда-нибудь...",
+    "tags": ["graphic", "soon"]
+  },
+  "p5j": {
+    "title": "p5.js",
+    "desc": "",
+    "soon": "Когда-нибудь...",
+    "tags": ["graphic", "soon"]
   },
   "abo": {
     "title": "О проекте",
@@ -21,12 +42,32 @@
   },
   "pat": {
     "title": "Поддержать",
-    "link": "#",
+    "link": "https://www.patreon.com/pajam",
     "tags": ["menu"]
   },
   "git": {
     "title": "GitHub",
-    "link": "#",
+    "link": "https://github.com/pajamhub/dev",
     "tags": ["menu"]
+  },
+  "dis": {
+    "title": "Чаты",
+    "link": "https://discord.gg/qwtsSXr",
+    "tags": ["menu"]
+  },
+  "vk": {
+    "title": "vk.com",
+    "link": "https://vk.com/pajam",
+    "tags": ["social"]
+  },
+  "tw": {
+    "title": "twitter",
+    "link": "https://twitter.com/pajam_tw",
+    "tags": ["social"]
+  },
+  "tu": {
+    "title": "tumblr",
+    "link": "https://pajam.tumblr.com/",
+    "tags": ["social"]
   }
 }

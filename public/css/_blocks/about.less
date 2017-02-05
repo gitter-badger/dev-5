@@ -1,5 +1,7 @@
 .about {
-  color: @color03;
+  margin-bottom: @base-line*2;
+
+  color: @color04;
 
   h2, h3, h4, h5, h6 {
     color: @color06;
@@ -16,7 +18,7 @@
   a {
     text-decoration: none;
 
-    color: @color02;
+    color: @color03;
     border-bottom: 1px solid @color0D;
 
     :hover {
@@ -26,12 +28,11 @@
 
   @media (min-width: @breakpoint-small) {
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto @base-line*2;
   }
 
   @media (min-width: @breakpoint-medium) {
     width: 60%;
-    margin: 0 auto;
   }
 }
 

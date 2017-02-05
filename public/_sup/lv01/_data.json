@@ -1,0 +1,14 @@
+{
+  "index": {
+    "slug": "lv01",
+    "title": "Пин-Понг",
+    "desc": "Знакомимся с движком, языком TypeScript и создаем свою первую игру на Superpowers!",
+    "next": "start",
+    "tags": ["level"]
+  },
+  "ch01": {
+    "title": "",
+    "next": "ch02",
+    "tags": ["ch"]
+  }
+}
