@@ -2,7 +2,7 @@
   .top-bar__left
     if current.source === 'index' && current.path.length === 1
       a.logo.logo--main(href="http://pajam.pw/") pajam
-    else if current.path[current.path.length - 2] === 'about'
+    else if current.path[current.path.length - 2] === 'about' || current.source === '404'
       a.logo.logo--main(href="/") pajam
     else if current.path[current.path.length - 2] === 'sup'
       a.logo.logo--game(href="/") p
@@ -16,6 +16,9 @@
   if current.source === 'index' && current.path.length === 1
     .top-bar__right.top-bar__right--pages
       //- a.top-bar__link.top-bar__link--over(href="#") другие проекты
+      span.top-bar__path= current.path.join(' / ')
+  else if current.source === '404'
+    .top-bar__right.top-bar__right--pages
       span.top-bar__path= current.path.join(' / ')
   else if current.source === 'index' && current.path.length === 2
     .top-bar__right.top-bar__right--pages

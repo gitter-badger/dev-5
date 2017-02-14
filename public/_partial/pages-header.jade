@@ -7,6 +7,8 @@ if current.source === 'index' && current.path.length === 1
           a.header__vers-link(href='log/#{ slug }') #{ slug }
   .header__yield
     != yield
+else if current.source === '404'
+  != yield
 else if current.path[current.path.length - 2] === 'sup'
   h1.header__title.header__title--game #{ title }
   .header__desc

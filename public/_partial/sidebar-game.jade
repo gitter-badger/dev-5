@@ -5,7 +5,7 @@ aside.sidebar
         span.logo__slug #{ current.path[0] }
     .top-bar__right.top-bar__right--pages
       a.top-bar__link.side-toggle-close(href="#") esc
-  if current.path[current.path.length - 2] === 'lv01'
+  if current.path[current.path.length - 2] === 'lvl01'
     for point, slug in public[current.path[0]][current.path[1]]._data
       if _.includes(point.tags, 'level')
         ul.menu.menu--game.menu--header

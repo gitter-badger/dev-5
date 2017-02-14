@@ -1,4 +1,4 @@
-if current.source === 'index' && current.path.length === 1
+if current.path.length === 1
   ul.menu.menu--main
     for point, slug in public._data
       if _.includes(point.tags, 'menu')
