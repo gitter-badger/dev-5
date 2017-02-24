@@ -78,6 +78,13 @@ ul ol,
 ol ul {
 	margin: 0;
 }
+li {
+	padding-bottom: @base-line-smaller/4;
+}
+li ul {
+	margin: 0;
+	padding-left: @base-line;
+}
 ol ol li {
 	list-style-type: lower-alpha;
 }
@@ -112,7 +119,7 @@ blockquote {
 	position: relative;
 	margin: @base-line 0;
 	padding: 0 1em;
-	border: 1px solid @color04;
+	border: 1px solid @color05;
 	::before {
 		content: " 	__φ(。。)";
 		position: absolute;

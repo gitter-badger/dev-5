@@ -10,5 +10,10 @@
     "title": "Подготовка Superpowers",
     "next": "ch02",
     "tags": ["ch"]
+  },
+  "ch02": {
+    "title": "Структура будущей игры",
+    "next": "end",
+    "tags": ["ch"]
   }
 }
